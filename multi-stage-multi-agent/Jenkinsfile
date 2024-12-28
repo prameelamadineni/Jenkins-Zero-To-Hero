@@ -6,7 +6,7 @@ pipeline {
         docker { image 'mssql:latest' }
       }
       steps {
-        SELECT name FROM sys.databases;
+        mssql -V
       }
     }
   }
