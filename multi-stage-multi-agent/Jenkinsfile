@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('DB') {
       agent {
-        docker { image 'mssql:latest' }
+        docker { image 'mcr.microsoft.com/mssql/server:2022-latest' }
       }
       steps {
         sh 'mssql -V'
