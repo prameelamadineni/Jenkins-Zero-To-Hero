@@ -6,8 +6,7 @@ pipeline {
         docker { image 'mcr.microsoft.com/mssql/server:2022-latest' }
       }
       steps {
-        sh 'docker exec -it sql1 "bash"'
-        sh 'mssql -V'
+        sh 'mysql -V'
       }
     }
   }
