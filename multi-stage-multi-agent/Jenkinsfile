@@ -5,10 +5,7 @@ pipeline {
         docker { image 'mssql:latest' }
       }
       steps {
-        SELECT @@SERVERNAME,
-       SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
-       SERVERPROPERTY('MachineName'),
-       SERVERPROPERTY('ServerName');
+        SELECT name FROM sys.databases;
       }
     }
   }
