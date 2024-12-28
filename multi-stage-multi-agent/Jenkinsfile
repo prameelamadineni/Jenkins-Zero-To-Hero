@@ -1,5 +1,6 @@
 pipeline {
   agent none
+  stages {
     stage('DB') {
       agent {
         docker { image 'mssql:latest' }
@@ -9,3 +10,4 @@ pipeline {
       }
     }
   }
+}
