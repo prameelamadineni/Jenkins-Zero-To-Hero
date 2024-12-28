@@ -6,7 +6,7 @@ pipeline {
         docker { image 'mssql:latest' }
       }
       steps {
-        mssql -V
+        sh 'mssql -V'
       }
     }
   }
